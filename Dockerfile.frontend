@@ -1,0 +1,14 @@
+FROM python:3.11.9-slim-bookworm
+
+WORKDIR /frontend/
+COPY docker/.streamlit/ /frontend/.streamlit/
+COPY docker/frontend.py /frontend/
+COPY docker/prompts_specs.py /frontend/
+COPY scripts/prompts/ /frontend/prompts/
+COPY requirements.frontend.txt /frontend/
+
+RUN pip cache purge
+RUN pip install --no-cache-dir -r requirements.frontend.txt
+
+CMD ["streamlit", "run", "frontend.py"]
+

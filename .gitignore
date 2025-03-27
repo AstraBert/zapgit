@@ -1,0 +1,6 @@
+.mypy_cache/
+scripts/__pycache__/
+.env
+scripts/.env
+zapier-mcp.code-workspace
+*/testapi.py

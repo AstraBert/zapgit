@@ -1,0 +1,6 @@
+[server]
+port=80
+[theme]
+base="light"
+primaryColor="#FF6600"
+font="sans serif"

@@ -1,0 +1,5 @@
+streamlit==1.44.0
+banks==2.0.0
+pydantic==2.10.6
+requests==2.32.3
+platformdirs==4.3.7

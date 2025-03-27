@@ -1,0 +1,35 @@
+name: zapgit
+
+services:
+  redis:
+    image: redis
+    ports: 
+      - 6379:6379
+    networks:
+      - nginxproxymanager_default
+  zapbackend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - 8000:443
+    networks:
+      - nginxproxymanager_default
+    secrets:
+      - groq_key
+  zapfrontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - 8501:80
+    networks:
+      - nginxproxymanager_default
+
+networks:
+  nginxproxymanager_default:
+    external: true
+
+secrets:
+  groq_key:
+    environment: groq_api_key

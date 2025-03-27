@@ -1,0 +1,11 @@
+FROM condaforge/miniforge3
+
+WORKDIR /backend/
+COPY docker/utils.py /backend/
+COPY docker/api.py /backend/
+COPY environment.yml /backend/
+COPY docker/*.sh /backend/
+
+RUN bash /backend/conda_env.sh
+
+CMD ["bash", "/backend/run.sh"]

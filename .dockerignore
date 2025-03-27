@@ -1,0 +1,8 @@
+.mypy_cache/
+scripts/__pycache__/
+scripts/*.py
+scripts/.streamlit
+scripts/.env
+.env
+bodhimindai-mcp.code-workspace
+*/testapi.py
