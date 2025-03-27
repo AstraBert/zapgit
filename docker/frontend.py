@@ -11,6 +11,17 @@ allowed_actions = ['Create Issue', 'Create Pull Request', 'Create Comment under 
 today = datetime.datetime.now()
 one_year_from_today = datetime.date(today.year+1, today.month, today.day)
 
+st.set_page_config(
+    page_title="ZapGit",
+    page_icon=":cat:",
+    layout="wide",
+    menu_items={
+        'Get Help': 'https://github.com/AstraBert/zapgit/discussions/categories/general',
+        'Report a bug': "https://github.com/AstraBert/zapgit/issues/",
+        'About': "Automate Your GitHub Flows with Zapier MCP!"
+    }
+)
+
 st.title(":orange[ZapGit] - GitHub automation with MCP :cat:")
 st.markdown("## Powered by [:orange[Zapier]](https://zapier.com) and [:orange[LlamaIndex]](https://www.llamaindex.ai)")
 st.markdown("Create and comment issues and PRs, get summaries on Discord and plan fix/merge reminders on Google Calendar!")
