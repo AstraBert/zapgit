@@ -12,7 +12,7 @@ services:
       context: .
       dockerfile: Dockerfile.backend
     ports:
-      - 8000:443
+      - 6400:443
     networks:
       - nginxproxymanager_default
     secrets:
@@ -22,7 +22,7 @@ services:
       context: .
       dockerfile: Dockerfile.frontend
     ports:
-      - 8501:80
+      - 8701:80
     networks:
       - nginxproxymanager_default
 
